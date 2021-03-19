@@ -3,6 +3,7 @@ This is a reduced version of https://github.com/nanoninja/docker-nginx-php-mysql
 This docker-compose file is used to run Kayako Classic on-premises and replace different components, when needed.
 
 Just put your downloaded distribution and key in ./web/public/, configure neccessary parameters in kayako's config.php and you are good to go.
+**`Notice:`** You must set ./etc/db/myconf.cnf file to read-only.
 
 Basic usage is described below in "Run the application" section.
 
