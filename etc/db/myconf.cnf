@@ -1,0 +1,20 @@
+[mysqld]
+#This file must remain read-only. Otherwise, mysql won't use it
+#Disables strict mode
+sql_mode= ""
+#Disables sha2 authentication in mysql 8
+default_authentication_plugin= mysql_native_password
+character-set-server=utf8
+collation-server=utf8_unicode_ci
+max_allowed_packet=64M
+connect-timeout=301
+optimizer-search-depth=7
+
+#Logging. Disable if not needed. Data folder is used for simplicity.
+log_error       =/var/lib/mysql/mysql_error.log
+general_log_file=/var/lib/mysql/mysql.log
+general_log     =1
+slow_query_log  =1
+slow_query_log_file=/var/lib/mysql/mysql_slow.log
+long_query_time =2
+log_queries_not_using_indexes = 1
