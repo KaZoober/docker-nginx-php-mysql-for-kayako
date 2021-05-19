@@ -52,3 +52,12 @@ services:
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
             - "./etc/db:/etc/mysql/conf.d"
+    # Simple external smtp to be configured in Admin CP
+    # Utilising php's mail() is not very docker-style and would require a lot of crutches
+    # Use disposable mail to test. Regular mail-servers would not accept your spam
+    # Or deploy a local mailserver
+    mail:
+        image: bytemark/smtp    
+        restart: always
+        ports:
+            - "25:25"

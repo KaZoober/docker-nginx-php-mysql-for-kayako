@@ -4,7 +4,7 @@
 
 # Application
 data/
-web/public
+web/public/
 
 # PHPStorm
 .idea/**/workspace.xml
